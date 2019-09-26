@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fibonacci Number Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="upper">
+    <div class="container">
+      <h1>Fibonacci Number Generator</h1>
+      <input type="text" id="inputNumber">
+      <button id="generate">Generate</button>
+    </div>
+  </div>
+  <div id="lower">
+    <div class="container">
+    </div>
+  </div>
+  <script>
+    window.onload = () => {
+      const lowerPanel = document.getElementById('lower').getElementsByClassName("container")[0];
+      const generateFibNums = () => {
+        while (lowerPanel.firstChild) {
+          lowerPanel.removeChild(lowerPanel.firstChild);
+        }
+        const input = document.getElementById("inputNumber").value;
+        const n = parseInt(input, 10);
+        let arr = [0, 1];
+        for (let i = 2; i < n + 1; i++) {
+          arr.push(arr[i - 1] + arr[i - 2])
+        }
+
+        // create elements for the result
+        const h2 = document.createElement('h2');
+        h2.textContent = 'Here is your Fibonacci sequence';
+        lowerPanel.appendChild(h2);
+
+        for (i = 0; i < arr.length; i++) {
+          const div = document.createElement('div');
+          div.className = 'number';
+          div.index = i;
+          div.textContent = arr[i];
+          lowerPanel.appendChild(div);
+        }
+      }
+      document.getElementById("generate").onclick = generateFibNums;
+    }
+  </script>
+</body>
+
+</html>

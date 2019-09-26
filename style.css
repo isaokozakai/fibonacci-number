@@ -1,0 +1,87 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+.container {
+    margin: 10px 30px;
+}
+
+#upper {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    background-color: goldenrod;
+}
+
+#upper > .container {
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+}
+
+#upper h1 {
+    margin: 10px auto;
+}
+
+#inputNumber {
+    margin: 10px 5px 10px 30px;
+    height: 37px;
+    width: 60px;
+    font-size: 20px;
+    line-height: 37px;
+    border-radius: 5px;
+    border: 1px solid #566963;
+    font-family: Arial;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    height: 40px;
+    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+    background-color: #768d87;
+    border-radius: 5px;
+    border: 1px solid #566963;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 22px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #2b665e;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color: #6c7c7c;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+#lower > .container {
+    margin-top: 20px;
+}
+
+#lower h2 {
+    margin: 10px auto;
+}
+
+.number {
+    font-size: 20px;
+    font-family: Arial;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 7px 20px;
+}
